@@ -192,7 +192,9 @@ function renderProjects(array) {
 		} else {
 			
 			projectDiv.innerHTML = `
-			<iframe name="iframe1" src="${project.btn1Link}" class="project_iframe"></iframe>
+				<object data="https://instagram.com/crimsoncalico/embed" width="400" height="300" type="text/html" class="project_iframe">
+					<img src="./assets/IMG/img-12.png" alt="" class="project_img">
+                </object>
 				<div class="project_info">
 					<p>${project.description}</p>
 					<div class="project_btns">
