@@ -30,6 +30,11 @@ h1 {
     font-family: the_cat;
 }
 
+h2 {
+    color: #F9DEC9;
+    font-family: the_cat;
+}
+
 p {
     font-family: meowcat;
     color: #F9DEC9;
@@ -41,8 +46,8 @@ p {
     background-image: url(../IMG/backround.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 125vh;
     z-index: 1;
+    position: relative;
 }
 
 .head h1 {
@@ -135,8 +140,7 @@ p {
     background-size: cover;
     height: 100vh;
     background-image: url(../IMG/backround_abt.jpg);
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    position: relative;
 }
 
 .about h1 {
@@ -161,10 +165,9 @@ p {
 .works {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
     background-image: url(../IMG/backround_work.jpg);
-    margin-top: 10vh;
     padding: 80px;
+    position: relative;
 }
 
 .works h1 {
@@ -195,6 +198,7 @@ p {
     position: relative;
     width: 280px;
     margin: 0 16px 16px 0;
+    margin-right: 5%;
 }
 
 .projects_container {
@@ -204,46 +208,24 @@ p {
     
 }
 
-.project_info {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    width: 90%;
-    height: 80%;
-    background-color: #DC143C;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
-    border-radius: 10px;
-}
-
-.project_info p {
-    padding-bottom: 16px;
-}
-
 .project_info:hover {
     opacity: 1;
     transition: opacity .5s ease-in-out;
 }
 
 .btn_work {
-    padding: 10px 35px;
+    padding: 5px 5px 5px 5px;
     border: none;
     outline: none;
     cursor: pointer;
     position: relative;
     border-radius: 12px;
     z-index: 0;
-    font-size: 20px;
+    font-size: 30px;
     font-family: meowcat;
     color: #F9DEC9;
-    text-shadow: 7.5px 7.5px 10px#0A0011;
+    box-shadow: 7.5px 7.5px 10px#0A0011;
+    margin-right: 1%;
 }
 
 .btn_work::after {
@@ -260,12 +242,110 @@ p {
     opacity: 1;
 }
 
-.project_img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
 .project_iframe {
     height: 250px;
     width: 290px;
+}
+
+.project {
+    width: 20%;
+    height: auto;
+    background-color: #1E1A1D;
+    border-radius: 10px;
+    box-shadow: 7.5px 7.5px 10px#0A0011;
+    text-align: center;
+
+}
+
+.project img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    width: 90%;
+}
+
+.project h2 {
+    font-size: 45px;
+    text-decoration: underline;
+    padding-top: 1vh;
+}
+
+.project p {
+    padding-bottom: 2vh;
+}
+
+@media (max-width:1500px) {
+    .project {
+        width: 40%;
+    }
+
+    .top {
+        display: none;
+    }
+}
+
+@media (min-width:1499px) {
+    .bottom {
+        display: none;
+    }
+}
+
+@media (max-width:900px) {
+    .project {
+        width: 80%;
+    }
+}
+
+/* Slideshow */
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
 }

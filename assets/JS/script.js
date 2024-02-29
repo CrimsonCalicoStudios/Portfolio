@@ -60,24 +60,32 @@ _INTERVAL_VAL = setInterval(Type, 100);
 //Projects to render
 const projectsArray = [
 	{
-	description: "Edens gate Login",
+	img: "./assets/IMG/PL_preview.png",
+	title: "Edens gate Login",
+	description: "",
 	btn1Link: "https://lazarus.crimsoncali.co/Login/",
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
 	tag: "site",
+	width: "250px",
+	height: "125px",
 	},
 	{
 	img: "./assets/IMG/img-2.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
 	tag: "model",
+	width: "100px",
+	height: "100px",
 	},
 	{
 	img: "./assets/IMG/img-3.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -87,6 +95,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-4.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -96,6 +105,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-5.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -105,6 +115,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-6.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -114,6 +125,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-7.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -123,6 +135,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-8.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -132,6 +145,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-9.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -141,6 +155,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-10.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -150,6 +165,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-11.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -159,6 +175,7 @@ const projectsArray = [
 	},
 	{
 	img: "./assets/IMG/img-12.png",
+	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
 	btn1: "test",
@@ -180,14 +197,12 @@ function renderProjects(array) {
 
 		if(project.img) {
 			projectDiv.innerHTML = `
-				<img src="${project.img}" alt="" class="project_img">
-					<div class="project_info">
-						<p>${project.description}</p>
-						<div class="project_btns">
-							<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
-							<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
-						</div>
-					</div>
+				<img src="${project.img}" alt="">
+				<h2>${project.title}</h2>
+				<p>${project.description}</p>
+				<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
+				<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
+				<br><br>
 			`;
 		} else {
 			
@@ -195,12 +210,13 @@ function renderProjects(array) {
 				<object data="https://instagram.com/crimsoncalico/embed" width="400" height="300" type="text/html" class="project_iframe">
 					<img src="./assets/IMG/img-12.png" alt="" class="project_img">
                 </object>
-				<div class="project_info">
+				<div class="project_info" style="width: ${project.width}; height: ${project.height};">
 					<p>${project.description}</p>
 					<div class="project_btns">
 						<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
 						<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
 					</div>
+
 				</div>
 		`;
 		}
