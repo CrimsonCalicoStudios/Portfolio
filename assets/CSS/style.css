@@ -4,7 +4,26 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
     text-decoration: none;
+    
 }
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: .5em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #1E1A1D;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #DC143C;
+    border-radius: 10px;
+}
+
+/* Fonts */
 
 @font-face {
     font-family: Cattie;
@@ -21,6 +40,7 @@
     src: url(../Fonts/Meowcat.otf);
 }
 
+/* core */
 body {
     background-image: url(../IMG/backfill.png); 
 }
@@ -40,7 +60,9 @@ p {
     color: #F9DEC9;
     font-size: 40px;
 }
+
 /* Header Detail */
+
 .head {
     transition: 1s;
     background-image: url(../IMG/backround.jpg);
@@ -242,11 +264,6 @@ p {
     opacity: 1;
 }
 
-.project_iframe {
-    height: 250px;
-    width: 290px;
-}
-
 .project {
     width: 20%;
     height: auto;
@@ -263,6 +280,7 @@ p {
     margin-right: auto;
     margin-top: 1vh;
     width: 90%;
+    border-radius: 10px;
 }
 
 .project h2 {
@@ -306,30 +324,21 @@ p {
     margin: auto;
 }
 
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+.mySlides img {
+    border-radius: 10px;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+/* Caption text */
+.text {
+    font-size: 25px;
     position: absolute;
-    top: 0;
+    bottom: 8px;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-    height: 15px;
-    width: 15px;
+    height: 7.5px;
+    width: 7.5px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
@@ -344,10 +353,131 @@ p {
 /* Fading animation */
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
+    transition: fade ease-in-out;
 }
 
 @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+}
+
+/* Socials */
+.socials {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-image: url(../IMG/backround_soc.jpg);
+    position: relative;
+    padding: 80px;
+}
+
+.soc_info {
+    float: left;
+}
+
+.soc_info h1 {
+    font-family: the_cat;
+    color: #F9DEC9;
+    font-size: 100px;
+    margin-left: 10%;
+    text-align: left;
+    text-decoration:underline;
+    text-shadow: 7.5px 7.5px 10px#0A0011;
+    padding-top: 10vh;
+}
+
+.soc_info p {
+    margin-left: 10%;
+    text-align: left;
+    padding-top: 5vh;
+}
+
+ul {
+    position: relative;
+    display: flex;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+ul li a .fa-brands {
+    font-size: 6em;
+    color: #F9DEC9
+}
+
+ul li a .fa-solid {
+    font-size: 6em;
+    color: #F9DEC9
+}
+
+ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1) a::before {
+    content: "\f16d";
+    background-image: linear-gradient(45deg, 
+    #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+    #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #DC143C;
+}
+
+ul li:nth-child(2) a::before {
+    content: "\f09b";
+    color: #333;
+    border-bottom: 4px solid #333;
+}
+
+ul li:nth-child(3) a::before {
+    content: "\e61b";
+    color: #000000;
+    border-bottom: 4px solid #000000;
+}
+
+ul li:nth-child(4) a::before {
+    content: "\f08c";
+    color: #0e76a8;
+    border-bottom: 4px solid #0e76a8;
+}
+
+ul li:nth-child(5) a::before {
+    content: "\f0e0";
+    color: #DC143C;
+    border-bottom: 4px solid #DC143C;
+}
+
+ul li:hover a::before {
+    height: 100%;
+}
+
+.soc_view iframe {
+    float: right;
+    overflow: hidden; 
+    box-shadow: 7.5px 7.5px 10px#0A0011;
+    height: 700px;
+    width: 45%;
+}
+
+@media (max-width: 1500px) {
+    .soc_view .insta {
+        display: none;
+    }
 }
