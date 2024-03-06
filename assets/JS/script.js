@@ -60,7 +60,7 @@ _INTERVAL_VAL = setInterval(Type, 100);
 //Projects to render
 const projectsArray = [
 	{
-	img: "./assets/IMG/PL_preview.png",
+	img: "./assets/IMG/PL_Preview.png",
 	title: "Edens gate Login",
 	description: "",
 	btn1Link: "https://lazarus.crimsoncali.co/Login/",
