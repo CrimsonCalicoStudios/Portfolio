@@ -207,7 +207,7 @@ function renderProjects(array) {
 		}  else if(project.download) {
 			
 			projectDiv.innerHTML = `
-			<video muted loop style="width: 90%;" preload="auto">
+			<video controls muted loop style="width: 90%;" preload="auto">
 				<source src="${project.vid}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
@@ -219,7 +219,7 @@ function renderProjects(array) {
 		`;
 		} else if(project.vid) {
 			projectDiv.innerHTML = `
-			<video controls muted autoplay loop style="width: 90%;">
+			<video muted autoplay loop style="width: 90%;">
 				<source src="${project.vid}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
