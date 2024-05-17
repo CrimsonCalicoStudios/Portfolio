@@ -219,7 +219,7 @@ function renderProjects(array) {
 		`;
 		} else if(project.vid) {
 			projectDiv.innerHTML = `
-			<video muted autoplay loop style="width: 90%;">
+			<video controls muted autoplay loop style="width: 90%;">
 				<source src="${project.vid}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
