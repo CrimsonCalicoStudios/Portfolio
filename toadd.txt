@@ -2,13 +2,9 @@ To Add:
     360 video
     Model of potion shop
     Model of bedroom
-    Bingo in spinning ccs logo
-    EG Emails
-    Add logo
 
 To model:
     Make cafe and add that
-    Work on castle.blend Could be interesting?
     Update camp
     Work on appartment ani
 

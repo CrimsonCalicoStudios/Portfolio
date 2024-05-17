@@ -1,0 +1,725 @@
+/* ============== Fonts ============== */
+/* font-family: 'Crimson Text', serif; */
+/* font-family: 'Poppins', sans-serif; */
+/* ============= /Fonts ============== */
+
+/* ============= Universal ============= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191e21;
+    overflow-x: hidden;
+    color: azure;
+}
+
+a {
+    text-decoration: none;
+    color: azure;
+}
+
+/* ============ /Universal ============= */
+/* ============ Header ============= */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .07)), url(../IMG/background.jpg) center no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@keyframes slideIn {
+    from {
+
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.content {
+    z-index: 2;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 5rem;
+    animation: slideIn .5s forwards;
+    transform: translateX(-100rem);
+}
+
+.content p {
+    text-align: center;
+    font-size: 2.75rem;
+    padding-top: 10px;
+    animation: slideIn .5s forwards;
+    transform: translateX(100rem);
+}
+
+.content {
+    padding: 275px 70px 0;
+    color: #fff;
+}
+
+.content h1 {
+    text-align: left;
+    font-size: 48px;
+}
+
+.content p {
+    text-align: left;
+    font-size: 20px;
+    padding: 20px 0;
+    font-weight: 300;
+}
+
+.content a {
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+}
+
+.buttons {
+    margin-top: 8rem;
+    align-items: left;
+    text-align: left;
+    padding-bottom: 0px;
+}
+
+.button {
+    position: relative;
+    width: 200px;
+    height: 80px;
+    color: azure;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 70px;
+    letter-spacing: 2px;
+    margin: 20px;
+    transition: .5s; 
+    font-size: 18px;
+}
+
+.button:hover {
+    background: #000000 url(../IMG/buttonimg.png);
+    color: azure;
+    transition-delay: .8s;
+    background-size: 200px;
+    animation: animate .8s steps(8) forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y: -480px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .button {
+        height: 0;
+    }
+
+    .buttons {
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+    }
+    
+}
+
+.wave {
+    height: 100%;
+    width: 100%;
+    fill: #191e21;
+    opacity: 1;
+    margin-top: 0px;
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .wave {
+        opacity: 0;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+/* ============ /Header ============= */
+/* ============ Nav Bar ============= */
+.navbar {
+    width: 300px;
+    height: 100%;
+    background-color: #191e21; 
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25% 0 0 70%;
+    opacity: 95%;
+    transition: right .8s cubic-bezier(1, 0, 0, 1);
+    z-index: 5;
+}
+
+.change {
+    right: 0;
+}
+
+.hamburger-menu {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: purple;
+    transition: all .8s;
+}
+
+.change .line-1 {
+    transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+    opacity: 0;
+}
+
+.change .line-3 {
+    transform: rotateZ(45deg) translate(-8px, -6px);
+}
+
+.nav-list {
+    opacity: 100%;
+    text-align: right;
+}
+
+.nav-item {
+    list-style: none;
+    margin: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 22px;
+    color: azure;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: purple;
+    position: absolute;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav-link::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+.nav-link::before {
+    top: 0;
+    transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+/* ============ /Nav Bar ============= */
+/* ============ About us ============ */
+.about {
+    width: 100%;
+    height: 80vh;
+    margin-top: 0px;
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 40px;
+    color: azure;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.about h1::after {
+    content: "";
+    height: 5px;
+    width: 200px;
+    background-color: purple;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.wrapper {
+    padding: 0 60px;
+    margin: 0px auto;
+}
+
+.about-content {
+    width: 60%;
+    float: left;
+    text-align: left;
+    padding: 0 30px;
+}
+
+.about-content h3 {
+    color: azure;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: azure;
+    margin-top: 0px;
+}
+
+.about-content .button {
+    display: inline-block;
+    text-decoration: none;
+    color: azure;
+}
+
+.image-section {
+    width: 40%;
+    float: right;
+    padding: 0 30px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.hov-col:hover {
+     color: purple;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        margin-bottom: 500px;
+    }
+
+    .about {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .about h1 {
+        font-size: 32px;
+    }
+
+    .about-content {
+        width: 100%;
+        float: none;
+    }
+
+    .image-section {
+        float: none;
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    .content {
+        margin-bottom: 400px;
+    }
+}
+/* ============ /About section ============= */
+/* ============ tools ============ */
+.tools {
+    background: url(../IMG/flipped-background.jpg);
+    background-size: cover;
+    padding: 150px 0;
+}
+
+.wave2 {
+    height: 100%;
+    width: 100%;
+    fill: #191e21;
+    opacity: 1;
+    margin-bottom: 0px;
+    margin-top: -200px;
+    z-index: 2;
+    position: relative;
+}
+
+.wave3 {
+    height: 100%;
+    width: 100%;
+    fill: #191e21;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: -200px;
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    .wave2 {
+        opacity: 0;
+    }
+
+    .wave3 {
+        opacity: 0;
+    }
+}
+
+.inner-width {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.section-title {
+    text-align: center;
+    color: azure;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.service-border {
+    width: 250px;
+    height: 5px;
+    background: purple;
+    margin: 5px auto 40px auto;
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-box {
+    max-width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    color: azure;
+    cursor: pointer;
+}
+
+.service-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgb(123, 20, 220);
+    color: rgb(23, 1, 59);
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    transition: .3s linear;
+}
+
+.service-icon-grey {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid #191e21;
+    color: #191e21;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-top: 16px;
+    transition: .3s linear;
+}
+
+.service-icon i {
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+}
+
+.service-icon-grey i {
+    line-height: 70px;
+    transform: rotate(-45deg);
+    font-size: 26px;
+}
+
+.service-box:hover .service-icon {
+    background: rgb(23, 1, 59);
+    color: #ffffff;
+}
+
+.service-box:hover .service-icon-grey {
+    background: #191e21;
+    color: crimson;
+}
+
+.service-title {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.service-desc {
+    font-size: 12.5px;
+}
+
+@media screen and (max-width: 960px) {
+    .service-box {
+        max-width: 45%;
+    }
+
+    .service-icon {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        border: 3px solid #191e21;
+        color: #191e21;
+        transform: rotate(45deg);
+        margin-bottom: 30px;
+        margin-top: 16px;
+        transition: .3s linear;
+    }
+
+    .service-box:hover .service-icon {
+        background: #191e21;
+        color: crimson;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .service-box {
+        max-width: 50%;
+    }
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .service-box {
+        max-width: 100%;
+    }
+}
+/* ============ /tools ============= */
+/* =========== team ============ */
+.team-section {
+    background: #191e21;
+    text-align: center;
+}
+
+.inner-width {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    color: azure;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+.team-section h1 {
+    font-size: 35px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
+}
+
+.margleft {
+    margin-left: 20rem;
+}
+
+.pe {
+    float: left;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 40px 0;
+    transition: 0.4s;
+}
+
+.cali:hover {
+    box-shadow: 10px 10px 10px crimson;
+    background-color: #111416;
+}
+
+.chez:hover {
+    box-shadow: 10px 10px 10px rgb(19, 71, 211);
+    background-color: #111416;
+}
+
+.kath:hover {
+    box-shadow: 10px 10px 10px rgb(112, 255, 112);
+    background-color: #111416;
+}
+
+.pe img {
+    width: 200px;
+    height: 200px;
+}
+
+.chez img {
+    width: 350px;
+    height: 200px;
+}
+
+.p-name {
+    margin: 16px 0;
+    text-transform: uppercase;
+}
+
+.p-des {
+    font-style: italic;
+    color: blueviolet;
+}
+
+.p-sm {
+    margin-top: 12px;
+}
+
+.p-sm a {
+    margin: 0 4px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: 0.6s;
+}
+
+.p-sm a:hover {
+    transform: scale(1.3);
+    color: crimson;
+}
+
+.p-sm a i {
+    color: azure;
+    line-height: 30px;
+}
+
+@media screen and (max-width: 700px) {
+    .pe {
+        width: 100%;
+    }
+
+    .margleft {
+        margin-left: 0;
+    }
+}
+/* =========== /team ============ */
+/* ============ Footer ============ */
+footer {
+    background: #191e21;
+    padding: 90px 0;
+    font-size: 15px;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    list-style: none;
+    list-style: none;
+    font-size: 20px;
+}
+
+.right-col h1 {
+    font-size: 45px;
+}
+
+.border {
+    width: 250px;
+    height: 4px;
+    border-radius: 10px;
+    background: purple;
+}
+
+.useful-links ul li a {
+    list-style: none;
+    font-size: 30px;
+}
+
+.useful-links a {
+    text-decoration: none;
+    color: azure;
+}
+
+.useful-links a:hover {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.logotxt {
+    margin-left: 120px;
+}
+
+@media screen and (max-width: 960px) {
+    .footer-container {
+        max-width: 600px;
+    }
+
+    .right-col {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .left-col {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =========== /Footer ============ */

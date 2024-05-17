@@ -60,11 +60,11 @@ _INTERVAL_VAL = setInterval(Type, 100);
 //Projects to render
 const projectsArray = [
 	{
-	img: "./assets/IMG/PL_Preview.png",
+	img: "./assets/IMG/Work/PL_Preview.png",
 	title: "Edens gate Login",
-	description: "",
+	description: "A Login site I made for my college project that was dropped, Currently being redesigned and the login system is broken.",
 	btn1Link: "https://lazarus.crimsoncali.co/Login/",
-	btn1: "test",
+	btn1: "View Live",
 	btn2Link: "/#",
 	btn2: "test2",
 	tag: "site",
@@ -72,9 +72,9 @@ const projectsArray = [
 	height: "125px",
 	},
 	{
-	img: "./assets/IMG/img-2.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+	vid: "./assets/IMG/Work/Castle_Render.mp4",
+	title: "Castle Fire Test",
+	description: "A test on using fire and water physics in blender i made to resemble a castle on a small island.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
@@ -84,39 +84,39 @@ const projectsArray = [
 	height: "100px",
 	},
 	{
-	img: "./assets/IMG/img-3.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+	vid: "./assets/IMG/Work/Bingo_Logo.mp4",
+	title: "CCS Animated Logo",
+	description: "The animation i made for CCS intro's in blender.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "game",
+	tag: "model",
 	},
 	{
-	img: "./assets/IMG/img-4.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+	img: "./assets/IMG/Work/ccslogo.png",
+	title: "CCC Logo",
+	description: "My new logo for CCC which i drew in procreate.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "game",
+	tag: "art",
 	},
 	{
-	img: "./assets/IMG/img-5.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-	btn1Link: "/#",
-	btn1: "test",
+	img: "./assets/IMG/Work/PL_Email.png",
+	title: "Edens Gate Emails",
+	description: "The email page connected to the Edens Gate Login page for my Project: Lazarus ARG.",
+	btn1Link: "https://lazarus.crimsoncali.co/Email/",
+	btn1: "View Live",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "game",
+	tag: "site",
 	},
 	{
-	img: "./assets/IMG/img-6.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+	vid: "./assets/IMG/Work/Bingo_BG.mp4",
+	title: "Bingo Background",
+	description: "A looping animation i made origionally for a website background.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
@@ -124,9 +124,19 @@ const projectsArray = [
 	tag: "site",
 	},
 	{
-	img: "./assets/IMG/img-7.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+	img: "./assets/IMG/Work/Deltastar.png",
+	title: "Deltastar",
+	description: "A website made for a game build to work on the Sir Patrick Moore Planetarium dome.",
+	btn1Link: "./assets/Non-Live_Sites/DomeShow/",
+	btn1: "View Live",
+	btn2Link: "/#",
+	btn2: "test2",
+	tag: "site",
+	},
+	{
+	vid: "./assets/IMG/Work/Satis.mp4",
+	title: "Satisfying Render",
+	description: "We were tasked with making satisfying renders like Corridor Digital however i attempted to make it unstatisfting, i failed however due to keeping everything in sync.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
@@ -134,9 +144,9 @@ const projectsArray = [
 	tag: "site",
 	},
 	{
-	img: "./assets/IMG/img-8.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+	vid: "./assets/IMG/Work/Permaspin.mp4",
+	title: "Bingo Logo placement",
+	description: "Designed for my origional portfolio site where she would sit inside my old logo structure next to my name and information at the top, ended up being unused.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
@@ -144,17 +154,17 @@ const projectsArray = [
 	tag: "site",
 	},
 	{
-	img: "./assets/IMG/img-9.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-	btn1Link: "/#",
-	btn1: "test",
+	vid: "./assets/IMG/Work/360_VR.mp4",
+	title: "360 VR project",
+	description: "A VR film project for film class i made using a 360 camera, photoshop and after effects. I unfortunately got distracted at the end by the people i asked to act as distractions and went off script but im still proud of it, you will need a vr headset or 360 viewer to get the full experience.",
+	download: "./assets/IMG/Work/360_VR.mp4",
+	btn1: "Download",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "site",
+	tag: "video",
 	},
 	{
-	img: "./assets/IMG/img-10.png",
+	img: "./assets/IMG/CCS__Watermark.jpg",
 	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
@@ -164,17 +174,7 @@ const projectsArray = [
 	tag: "model",
 	},
 	{
-	img: "./assets/IMG/img-11.png",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-	btn1Link: "/#",
-	btn1: "test",
-	btn2Link: "/#",
-	btn2: "test2",
-	tag: "model",
-	},
-	{
-	img: "./assets/IMG/img-12.png",
+	img: "./assets/IMG/CCS__Watermark.jpg",
 	title: "",
 	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
 	btn1Link: "/#",
@@ -204,20 +204,30 @@ function renderProjects(array) {
 				<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
 				<br><br>
 			`;
-		} else {
+		}  else if(project.download) {
 			
 			projectDiv.innerHTML = `
-				<object data="https://instagram.com/crimsoncalico/embed" width="400" height="300" type="text/html" class="project_iframe">
-					<img src="./assets/IMG/img-12.png" alt="" class="project_img">
-                </object>
-				<div class="project_info" style="width: ${project.width}; height: ${project.height};">
-					<p>${project.description}</p>
-					<div class="project_btns">
-						<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
-						<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
-					</div>
-
-				</div>
+			<video muted autoplay loop style="width: 90%;">
+				<source src="${project.vid}" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<h2>${project.title}</h2>
+			<p>${project.description}</p>
+			<a class="btn_work" href="${project.download}" download="360VRProject_Cali">${project.btn1}</a>
+			<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
+			<br><br>
+		`;
+		} else if(project.vid) {
+			projectDiv.innerHTML = `
+			<video muted autoplay loop style="width: 90%;">
+				<source src="${project.vid}" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+			<h2>${project.title}</h2>
+			<p>${project.description}</p>
+			<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
+			<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
+			<br><br>
 		`;
 		}
 		

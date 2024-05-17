@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 
 /* core */
 body {
-    background-image: url(../IMG/backfill.png); 
+    background-image: url(../IMG/Backgrounds/backfill.png); 
 }
 
 h1 {
@@ -64,19 +64,21 @@ p {
 
 /* Header Detail */
 
-.head {
+.hero {
     transition: 1s;
-    background-image: url(../IMG/backround.jpg);
+    background-image: url(../IMG/Backgrounds/background_hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
-    position: relative;
     width: 100%;
-    display: block;
-    height: auto;
+    min-height: 1080px;
 }
 
-.head h1 {
+.head-content {
+    padding-top: 5vh;
+}
+
+.hero h1 {
     margin-left: 10%;
     text-align: left;
     color: #F9DEC9;
@@ -86,10 +88,9 @@ p {
     transition: 1s;
 }
 
-.head p {
+.hero p {
     text-align: left;
     margin-left: 10%;
-    margin-top: 15vh;
 }
 
 /* Button */
@@ -164,7 +165,7 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
-    background-image: url(../IMG/backround_abt.jpg);
+    background-image: url(../IMG/Backgrounds/backround_abt.jpg);
     position: relative;
     width: 100%;
     display: block;
@@ -190,13 +191,10 @@ p {
 
 .works {
     background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../IMG/backround_work.jpg);
+    background-size: fill;
+    background-image: url(../IMG/Backgrounds/backround_work.jpg);
     padding: 80px;
-    position: relative;
-    width: 100%;
-    display: block;
-    height: auto;
+    min-height: 1080px;
 }
 
 .works h1 {
@@ -289,6 +287,15 @@ p {
     border-radius: 10px;
 }
 
+.project video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
+    width: 90%;
+    border-radius: 10px;
+}
+
 .project h2 {
     font-size: 45px;
     text-decoration: underline;
@@ -372,8 +379,8 @@ p {
 .socials {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    background-image: url(../IMG/backround_soc.jpg);
+    min-height: 1080px;
+    background-image: url(../IMG/Backgrounds/backround_soc.jpg);
     position: relative;
     padding: 80px;
 }
@@ -473,12 +480,16 @@ ul li:hover a::before {
     height: 100%;
 }
 
+.soc_view {
+    padding-top: 7vh;
+}
+
 .soc_view iframe {
     float: right;
     overflow: hidden; 
     box-shadow: 7.5px 7.5px 10px#0A0011;
-    height: 700px;
-    width: 45%;
+    height: 540px;
+    width: 35%;
 }
 
 @media (max-width: 1500px) {
@@ -503,7 +514,7 @@ ul li:hover a::before {
 
 /* Footer */
 .footer {
-    background-image: url(../IMG/backfill.png);
+    background-image: url(../IMG/Backgrounds/backfill.png);
     position: relative;
     height: auto;
     width: 100%;
