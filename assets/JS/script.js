@@ -124,7 +124,7 @@ const projectsArray = [
 	tag: "site",
 	},
 	{
-	img: "./assets/IMG/Work/Deltastar.png",
+	img: "./assets/IMG/Work/DeltaStar.png",
 	title: "Deltastar",
 	description: "A website made for a game build to work on the Sir Patrick Moore Planetarium dome.",
 	btn1Link: "./assets/Non-Live_Sites/DomeShow/",
