@@ -207,13 +207,13 @@ function renderProjects(array) {
 		}  else if(project.download) {
 			
 			projectDiv.innerHTML = `
-			<video muted autoplay loop style="width: 90%;" preload="auto">
+			<video muted loop style="width: 90%;" preload="auto">
 				<source src="${project.vid}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
 			<h2>${project.title}</h2>
 			<p>${project.description}</p>
-			<a class="btn_work" href="${project.download}" download="360VRProject_Cali">${project.btn1}</a>
+			<a class="btn_work" href="${project.download}" download>${project.btn1}</a>
 			<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
 			<br><br>
 		`;
