@@ -1,5 +1,4 @@
 To Add:
-    360 video
     Model of potion shop
     Model of bedroom
 

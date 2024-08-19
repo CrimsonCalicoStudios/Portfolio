@@ -67,9 +67,8 @@ const projectsArray = [
 	btn1: "View Live",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "site",
 	tag: "site",
-	width: "250px",
-	height: "125px",
 	},
 	{
 	vid: "./assets/IMG/Work/Castle_Render.mp4",
@@ -79,9 +78,8 @@ const projectsArray = [
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "animation",
 	tag: "model",
-	width: "100px",
-	height: "100px",
 	},
 	{
 	vid: "./assets/IMG/Work/Bingo_Logo.mp4",
@@ -91,6 +89,7 @@ const projectsArray = [
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "animation",
 	tag: "model",
 	},
 	{
@@ -101,6 +100,7 @@ const projectsArray = [
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "img",
 	tag: "art",
 	},
 	{
@@ -111,17 +111,19 @@ const projectsArray = [
 	btn1: "View Live",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "site",
 	tag: "site",
 	},
 	{
 	vid: "./assets/IMG/Work/Bingo_BG.mp4",
 	title: "Bingo Background",
-	description: "A looping animation i made origionally for a website background.",
+	description: "A looping animation i made originally for a website background.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "site",
+	type: "animation",
+	tag: "model",
 	},
 	{
 	img: "./assets/IMG/Work/DeltaStar.png",
@@ -131,6 +133,7 @@ const projectsArray = [
 	btn1: "View Live",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "site",
 	tag: "site",
 	},
 	{
@@ -141,17 +144,19 @@ const projectsArray = [
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "site",
+	type: "animation",
+	tag: "model",
 	},
 	{
 	vid: "./assets/IMG/Work/Permaspin.mp4",
 	title: "Bingo Logo placement",
-	description: "Designed for my origional portfolio site where she would sit inside my old logo structure next to my name and information at the top, ended up being unused.",
+	description: "Designed for my original portfolio site where she would sit inside my old logo structure next to my name and information at the top, ended up being unused.",
 	btn1Link: "/#",
 	btn1: "test",
 	btn2Link: "/#",
 	btn2: "test2",
-	tag: "site",
+	type: "animation",
+	tag: "model",
 	},
 	{
 	vid: "./assets/IMG/Work/360_VR.mp4",
@@ -161,27 +166,44 @@ const projectsArray = [
 	btn1: "Download",
 	btn2Link: "/#",
 	btn2: "test2",
+	type: "video",
 	tag: "video",
 	},
 	{
-	img: "./assets/IMG/CCS__Watermark.jpg",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-	btn1Link: "/#",
-	btn1: "test",
-	btn2Link: "/#",
-	btn2: "test2",
+	img: "./assets/IMG/Work/Beeple_Render.png",
+	title: "Beeple Render",
+	description: "Using free assets found omline we competed as a class to make a render close to beeple (warning, his content is weirder).",
+	type: "img",
 	tag: "model",
 	},
 	{
-	img: "./assets/IMG/CCS__Watermark.jpg",
-	title: "",
-	description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-	btn1Link: "/#",
-	btn1: "test",
-	btn2Link: "/#",
-	btn2: "test2",
-	tag: "model",
+	img: "./assets/IMG/Work/Astronaut_drawing.png",
+	title: "Drowning in space",
+	description: "The astronaut is traced however the background is the true star here and it's where i leanred i prefer drawing backgrounds a lot more than characters.",
+	type: "img",
+	tag: "art",
+	},
+	{
+	img: "./assets/IMG/Work/Branza_Background.png",
+	title: "Branza",
+	description: "The background i made for the website still in development made for the John Furst show: \"Out of this world\" in partnership with the bbc and national space centers: Immersive academy.",
+	type: "img",
+	tag: "art",
+	},
+	{
+	img: "./assets/IMG/Work/Abstract_Background_Red.png",
+	imga: "./assets/IMG/Work/Abstract_Background.png",
+	title: "Crimson Sunset",
+	description: "Just a background i made out of bordom in class but im happy with the result.",
+	type: "img",
+	tag: "art",
+	},
+	{
+	img: "./assets/IMG/Work/Dream_Drawing.png",
+	title: "Dreaming in a night sky",
+	description: "The first drawing i did in art class following a tutorial and definately inspired me to mess with all the extra settings that i used in my future work.",
+	type: "img",
+	tag: "art",
 	},
 ];
 
@@ -195,16 +217,15 @@ function renderProjects(array) {
 		const projectDiv = document.createElement("div")
 		projectDiv.classList.add("project")
 
-		if(project.img) {
+		if(project.type == "img") {
 			projectDiv.innerHTML = `
+			<a href="${project.img}" data-lightbox="roadtrip" data-title="${project.title}" alt="">
 				<img src="${project.img}" alt="">
+			</a>
 				<h2>${project.title}</h2>
 				<p>${project.description}</p>
-				<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
-				<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
-				<br><br>
 			`;
-		}  else if(project.download) {
+		}  else if(project.type == "animation") {
 			
 			projectDiv.innerHTML = `
 			<video controls muted loop style="width: 90%;" preload="auto">
@@ -213,22 +234,28 @@ function renderProjects(array) {
 			</video>
 			<h2>${project.title}</h2>
 			<p>${project.description}</p>
-			<a class="btn_work" href="${project.download}" download>${project.btn1}</a>
-			<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
-			<br><br>
 		`;
-		} else if(project.vid) {
+		} else if(project.type == "video") {
 			projectDiv.innerHTML = `
-			<video muted autoplay loop style="width: 90%;">
+			<video muted controls loop style="width: 90%;">
 				<source src="${project.vid}" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
 			<h2>${project.title}</h2>
 			<p>${project.description}</p>
 			<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
-			<a class="btn_work" href="${project.btn2Link}">${project.btn2}</a>
 			<br><br>
 		`;
+		}else if(project.type == "site") {
+			projectDiv.innerHTML = `
+				<img src="${project.img}" alt="">
+				<h2>${project.title}</h2>
+				<p>${project.description}</p>
+				<a class="btn_work" href="${project.btn1Link}">${project.btn1}</a>
+				<br><br>
+			`;
+		} else {
+			
 		}
 		
 
