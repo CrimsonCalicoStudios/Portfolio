@@ -177,7 +177,7 @@ const projectsArray = [
 	tag: "model",
 	},
 	{
-	img: "./assets/IMG/Work/Astronaut_drawing.png",
+	img: "./assets/IMG/Work/Astronaut_Drawing.png",
 	title: "Drowning in space",
 	description: "The astronaut is traced however the background is the true star here and it's where i leanred i prefer drawing backgrounds a lot more than characters.",
 	type: "img",
